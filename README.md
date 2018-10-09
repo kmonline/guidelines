@@ -22,6 +22,12 @@ Our purpose is to define a standard way to write code in a clear and semantic fo
 
 The entire team should contribute with this repo, giving suggestions and making changes on it, you're welcome!
 
+First-timer? We recommend start reading `General/Editor` :)
+
+## Our Guidelines
+
+* [General/Editor](https://github.com/kmonline/guidelines/blob/master/resources/general.md)
+
 ## References
 
 * [Plataformatec](http://guidelines.plataformatec.com.br/)
