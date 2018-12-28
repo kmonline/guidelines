@@ -67,7 +67,7 @@ Where `dddd` stands for Story Card in Kanban Flow, check some examples of naming
 
 #### User Story task cards
 
-Then we pull a card to work on in `KanbanFlow`, we ignore number of it, then we create a branch with the following pattern using story branch as base:
+Then we pull a card to work on in `KanbanFlow`, we ignore its number, then we create a branch with the following pattern using story branch as base:
 
 * `xz-describe-what-will-be-done`
 
@@ -88,8 +88,34 @@ Note that you're able to open new branches and Pull Requests as you consider nec
 
 ### Out of Flow
 
+For this swimlane we pull a card to work on in `KanbanFlow`, considering its number, we'll always have a branch with the following pattern using `master` as base:
+
+* `dddd-description-of-task`
+
+Where `dddd` stands for card in Out of Flow swimlane in KanbanFlow. Check some examples of naming out of flow branches:
+
+* `842-fix-manual-visits-for-same-origin-and-destination`
+* `858-zoom-traveled-path-images-on-hover`
+* `829-add-origin-address-to-visit-details-page`
+
 #### Graph example
 
-![https://github.com/kmonline/guidelines/blob/master/images/user_story_flow.png](https://github.com/kmonline/guidelines/blob/master/images/out_of_flow_flow.png)
+![https://github.com/kmonline/guidelines/blob/master/images/out_of_flow_flow.png](https://github.com/kmonline/guidelines/blob/master/images/out_of_flow_flow.png)
+
+#### One Pull Request vs. One card
+
+In some cases one Pull Request won't be enough to reflect KanbanFlow card, in this case you can create this parent branch, then create child branch from it. Imagine that `829-add-origin-address-to-visit-details-page` requires more than one Pull Request, you can create a branch using it as base:
+
+* `xz-normalize-origin-address-for-visits`
+
+In the branch above, I've identified a step as requirement before develop my task and I can do that for the next one also:
+
+* `xz-add-origin-address-to-visit-details-page`
+
+In example above, we ended up opening two Pull Requests using `829-add-origin-address-to-visit-details-page` as base. Making easier to review our code.
+
+#### Graph example
+
+![https://github.com/kmonline/guidelines/blob/master/images/complex_out_of_flow_flow.png](https://github.com/kmonline/guidelines/blob/master/images/complex_out_of_flow_flow.png)
 
 ## Advancing to Test Phase
