@@ -130,6 +130,8 @@ TODO
 
 #### Android
 
+TODO
+
 #### iOS
 
 In order to test your iOS change, you should verify if all changes that relies in API has been deployed to QA server. Now you should generate a build using `TestFlight` platform with your task.
