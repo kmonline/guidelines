@@ -119,3 +119,44 @@ In example above, we ended up opening two Pull Requests using `829-add-origin-ad
 ![https://github.com/kmonline/guidelines/blob/master/images/complex_out_of_flow_flow.png](https://github.com/kmonline/guidelines/blob/master/images/complex_out_of_flow_flow.png)
 
 ## Advancing to Test Phase
+
+As we only merge branches into `master` when it has passed in `Test Phase`, will be describe how to advance your change to be tested.
+
+### Platform
+
+TODO
+
+### Mobile
+
+#### Android
+
+#### iOS
+
+In order to test your iOS change, you should verify if all changes that relies in API has been deployed to QA server. Now you should generate a build using `TestFlight` platform with your task.
+
+### Testing more than one task at once
+
+To test more than one task, enter the `qa` branch.
+
+We use `qa` branch as an ephemeral branch to add many tasks on it, test, then discard it. You should never change your base branch to `qa` as it can be deleted anytime. So, if you have, for instance the following branches to test:
+
+* `xz-fix-button`
+* `dddd-introduce-new-config`
+
+To add them to `qa` branch, we will follow these steps:
+
+1. Tell developers that `qa` branch will be reset and ask if someone need to add something to `qa` branch also
+2. Delete `qa` branch remotely: `git push origin :qa`
+3. Delete `qa` branch locally: `git branch -D qa`
+4. Go to `master`: `git checkout master`
+5. Ensure your `master` branch is updated: `git pull origin master`
+6. Create a brand new `qa`: `git checkout -b qa`
+7. Push it: `git push origin qa`
+8. Merge your stuff: `git merge xz-fix-button`
+9. Push it: `git push origin qa`
+10. Merge new stuff: `git merge dddd-introduce-new-config`
+11. Push it: `git push origin qa`
+
+If you need to bump version, build number, etc, feel free to do it and commit in `qa` branch. Keep in mind that it be discarded after Test Phase.
+
+*Note*: If you don't have more than one change to test at once, avoid using `qa` branch.
