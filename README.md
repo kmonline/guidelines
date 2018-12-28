@@ -28,6 +28,7 @@ First-timer? We recommend start reading `General/Editor` and then `Pull Requests
 
 * [General/Editor](https://github.com/kmonline/guidelines/blob/master/resources/general.md)
 * [Pull Requests](https://github.com/kmonline/guidelines/blob/master/resources/pull_requests.md)
+* [Git Workflow](https://github.com/kmonline/guidelines/blob/master/resources/git_workflow.md)
 * [Ruby](https://github.com/kmonline/guidelines/blob/master/resources/ruby.md)
 
 ## References
