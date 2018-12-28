@@ -159,6 +159,6 @@ To add them to `qa` branch, we will follow these steps:
 10. Merge new stuff: `git merge dddd-introduce-new-config`
 11. Push it: `git push origin qa`
 
-If you need to bump version, build number, etc, feel free to do it and commit in `qa` branch. Keep in mind that it be discarded after Test Phase.
+If you need to bump version, build number, etc, feel free to do it and commit in `qa` branch. Keep in mind that it will be discarded after Test Phase.
 
 *Note*: If you don't have more than one change to test at once, avoid using `qa` branch.
